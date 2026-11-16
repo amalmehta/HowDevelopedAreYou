@@ -47,7 +47,7 @@ Classic scripts on a shared `HDAY` namespace (not ES modules) so the site also w
 ## Main flow
 
 1. Intro: enter age (16–99) → Start.
-2. 30 statements, one per screen; keys 1–5 or tap; auto-advance after 180 ms; Back / ← to revise.
+2. 30 statements, one per screen; keys 1–5 or tap; auto-advance after 350 ms (long enough to see your choice light up); Back / ← to revise.
 3. Result: maturity percentile among peers + band, three trait bars, a chart of the average by age with your score marked, explainers with sources.
 4. Save to history (on by default, can be turned off), share card, retake.
 

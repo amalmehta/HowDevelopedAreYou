@@ -474,6 +474,7 @@ OPEN QUESTIONS / ASSUMPTIONS:
 CHANGELOG:
 
 - 2026-11-15 — created
+- 2026-11-15 — auto-advance slowed from 180 to 350 ms after phone test
 - 2026-11-15 — review walkthrough: per-trait likely ranges; "Delete all results" keeps settings
 - 2026-11-15 — published: public repo, GitHub Pages at amalmehta.com/HowDevelopedAreYou
 - 2026-11-15 — first build: personality-maturity percentile site; filled DELIVERABLES, DEFINITIONS AND DEFERRED, OPEN QUESTIONS

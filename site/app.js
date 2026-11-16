@@ -72,6 +72,8 @@
 
   // ---------- questions ----------
   const LABELS = ["Disagree", "", "Neutral", "", "Agree"];
+  // Pause after answering so you see your choice light up before the next statement.
+  const ADVANCE_MS = 350;
   function question() {
     state.screen = "q";
     const it = items[state.idx];
@@ -101,7 +103,7 @@
     clearTimeout(state.advanceTimer);
     state.advanceTimer = setTimeout(() => {
       if (state.idx < items.length - 1) { state.idx++; question(); } else finish();
-    }, 180);
+    }, ADVANCE_MS);
   }
   function back() {
     clearTimeout(state.advanceTimer);

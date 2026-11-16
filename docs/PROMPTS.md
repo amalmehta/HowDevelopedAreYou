@@ -21,3 +21,5 @@ Answers given in the question widget (in order):
    → Added a GitHub Pages workflow (tests, then deploy site/), created the public repo, pushed.
 8. "Yes, walk through it"
    → Checked privacy, security and truth items on the live site; fixed missing per-trait ranges. Answers: delete keeps the setting; wording fair; phone feel "something else" (details pending).
+9. "the auto-advance felt a bit too fast"
+   → Raised the pause after answering from 180 ms to 350 ms.

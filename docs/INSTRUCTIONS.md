@@ -41,7 +41,7 @@ Things the tests can't check. Walk through before calling a release done.
 **Feel and look**
 - [ ] Opening animation: the mark springs in once, under a second, and never blocks typing your age.
 - [ ] With Reduce Motion on (system or Settings): plain fades only.
-- [ ] Answering feels instant: the button lights on press, the next statement follows after a short beat, no flicker.
+- [ ] Answering feels instant: the button lights on press, the next statement follows after a short beat (350 ms) you can see, no flicker.
 - [ ] Light and dark: every screen, the settings sheet, the chart, the share card (always light).
 - [ ] Phone width (375 px): nothing clipped, buttons easy to hit, the feedback tab doesn't cover answers.
 - [ ] Words: does the result feel fair and kind at the 5th percentile as well as the 95th?
@@ -66,4 +66,4 @@ Things the tests can't check. Walk through before calling a release done.
 - Privacy and security: all pass. Only the site and the two Google Fonts requests; storage holds only `hday.v1`, no cookies; saving off adds nothing; no CSP errors; share card shows percentiles and peer ages only; feedback link opens the issue form (sign-in required).
 - Truth: low-confidence note shows at 63 (302 peers). **Failed, fixed:** trait percentiles had no likely range; each trait now shows one on its meter.
 - **Failed, fixed:** "Delete everything" reset Save results to on. Now "Delete all results" keeps settings.
-- Feel (phone): "something else" reported, details pending. Wording at low percentiles: judged fair.
+- Feel (phone): auto-advance felt too fast at 180 ms. **Fixed:** now 350 ms. Wording at low percentiles: judged fair.
