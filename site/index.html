@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>How Developed Are You?</title>
+  <meta name="description" content="A 4-minute test of personality maturity: how conscientious, warm and steady you are compared with people your own age. Answers never leave your browser.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1A18" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <button class="brand" id="home" aria-label="Start page">
+      <img src="icon.svg" alt="" width="28" height="28"><span>How Developed Are You?</span>
+    </button>
+    <nav class="top-actions">
+      <button class="icon-btn" id="open-history" aria-label="Your past results" title="Your past results">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="8.5"/></svg>
+      </button>
+      <button class="icon-btn" id="open-settings" aria-label="Settings (⌘,)" title="Settings (⌘,)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <a class="feedback-tab" id="feedback" href="https://github.com/amalmehta/HowDevelopedAreYou/issues/new?title=Feedback" target="_blank" rel="noopener" title="Opens a GitHub issue (needs a GitHub account). Your results are not included.">Feedback</a>
+
+  <dialog id="settings" aria-labelledby="settings-title">
+    <form method="dialog" class="sheet">
+      <h2 id="settings-title">Settings</h2>
+      <label class="row">Theme
+        <select id="set-theme">
+          <option value="system">Match system</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+      <label class="row"><span>Save results in this browser<small>So you can retake and see how you change.</small></span>
+        <input type="checkbox" id="set-save" role="switch"></label>
+      <label class="row"><span>Reduce motion<small>Also on when your system asks for it.</small></span>
+        <input type="checkbox" id="set-motion" role="switch"></label>
+      <section class="privacy">
+        <h3>Your data</h3>
+        <p>Your answers and results stay in <strong>this browser only</strong> (localStorage). Nothing is sent to a server, there are no cookies or analytics, and nobody else can see them unless they use this browser profile. Fonts load from Google Fonts.</p>
+        <div class="btn-row">
+          <button type="button" class="btn" id="export">Export results (JSON)</button>
+          <button type="button" class="btn danger" id="delete-all">Delete everything</button>
+        </div>
+      </section>
+      <div class="btn-row end"><button class="btn primary" value="close">Done</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="norms.js"></script>
+  <script src="items.js"></script>
+  <script src="scoring.js"></script>
+  <script src="storage.js"></script>
+  <script src="content.js"></script>
+  <script src="share.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="How Developed Are You? icon: growth rings">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF6EE"/>
+      <stop offset="1" stop-color="#F1E8DA"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)"/>
+  <rect x="16.5" y="16.5" width="479" height="479" rx="111.5" fill="none" stroke="#E2D6C4" stroke-width="1"/>
+  <!-- growth rings, like a tree's: each ring a stage -->
+  <g fill="none" stroke-linecap="round" transform="translate(256 268)">
+    <circle r="168" stroke="#C9D5E1" stroke-width="18"/>
+    <circle r="120" stroke="#8EA7C0" stroke-width="18"/>
+    <circle r="72" stroke="#4A6A8A" stroke-width="18"/>
+    <!-- the newest growth, in terracotta -->
+    <path d="M -168 0 A 168 168 0 0 1 119 -119" stroke="#B5603F" stroke-width="18"/>
+  </g>
+  <circle cx="256" cy="268" r="26" fill="#4A6A8A"/>
+</svg>
