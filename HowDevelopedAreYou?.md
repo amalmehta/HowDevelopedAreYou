@@ -334,7 +334,10 @@ META-INSTRUCTIONS:
    what makes it recognisable is left.
  - How I think: push back and make me think; show what a suggestion rests on and
    how to check it; teach the idea so I can do it myself next time; take the
-   simplest thing that works; think several steps ahead.>
+   simplest thing that works; think several steps ahead.
+ - Pacing (2026-11-15): after a choice, pause long enough to see it register
+   (~350 ms) before moving on; fast is good, but never so fast the feedback is
+   missed.>
 
 <Finish by listing every deliverable: path, what it is, how to check it works.>
 
@@ -474,6 +477,7 @@ OPEN QUESTIONS / ASSUMPTIONS:
 CHANGELOG:
 
 - 2026-11-15 — created
+- 2026-11-15 — taste profile: added pacing line (pause to see a choice register)
 - 2026-11-15 — auto-advance slowed from 180 to 350 ms after phone test
 - 2026-11-15 — review walkthrough: per-trait likely ranges; "Delete all results" keeps settings
 - 2026-11-15 — published: public repo, GitHub Pages at amalmehta.com/HowDevelopedAreYou

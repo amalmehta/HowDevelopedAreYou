@@ -23,3 +23,5 @@ Answers given in the question widget (in order):
    → Checked privacy, security and truth items on the live site; fixed missing per-trait ranges. Answers: delete keeps the setting; wording fair; phone feel "something else" (details pending).
 9. "the auto-advance felt a bit too fast"
    → Raised the pause after answering from 180 ms to 350 ms.
+10. "Yes, add it" (taste-profile line on pacing)
+   → Added the pacing line to the taste profile in the spec.
