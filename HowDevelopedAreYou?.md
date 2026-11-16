@@ -458,7 +458,7 @@ DEFINITIONS AND DEFERRED:
 - Peers = ±3 years of your age, widened until n ≥ 300; ages above 70 use the 70 window.
 - Percentile = mid-rank among peers. Bands: < 25 less than most, 25–75 typical, > 75 more than most.
 - Low confidence: age ≥ 60, or window wider than ±6.
-- Likely range (estimate) = percentile of sum ± 1 SEM (α = 0.85, SEM = 6 sum points).
+- Likely range (estimate) = percentile of sum ± 1 SEM (α = 0.85, SEM = 6 sum points). Each trait shows its own likely range the same way (α 0.81–0.87, SEM ≈ 3 points of 50).
 - No age number: tested and rejected (R² = 0.063; 80% range ≈ 43 years; MAE 16 vs 8 for a constant guess; 64% outside age-average range).
 - Done when: norms script reproduces the numbers; tests pass; result appears < 100 ms; works on a phone and in dark mode; nothing leaves the browser except font requests.
 - Deferred: GitHub Pages polish, compare with a friend, forced-choice items against flattery, agency scale, other languages, Mac app, self-hosted fonts.
@@ -474,6 +474,7 @@ OPEN QUESTIONS / ASSUMPTIONS:
 CHANGELOG:
 
 - 2026-11-15 — created
+- 2026-11-15 — review walkthrough: per-trait likely ranges; "Delete all results" keeps settings
 - 2026-11-15 — published: public repo, GitHub Pages at amalmehta.com/HowDevelopedAreYou
 - 2026-11-15 — first build: personality-maturity percentile site; filled DELIVERABLES, DEFINITIONS AND DEFERRED, OPEN QUESTIONS
 - 2026-09-15 — added meta-instruction: built-out applications include a small feedback tab

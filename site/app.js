@@ -149,7 +149,7 @@
 
     const traits = el("section", { class: "card" },
       el("h2", { text: "The three traits" }),
-      el("p", { class: "sub", text: `Where you sit among ${r.peers.n.toLocaleString()} ${peers}. The shaded middle is the typical half.` }),
+      el("p", { class: "sub", text: `Where you sit among ${r.peers.n.toLocaleString()} ${peers}. The shaded middle is the typical half; the darker stretch around your dot is your likely range (an estimate).` }),
       scoring.TRAITS.map((t) => traitRow(t, r.traits[t])));
 
     const chart = el("section", { class: "card" },
@@ -194,8 +194,10 @@
         el("span", { class: "trait-icon", "aria-hidden": "true", text: c.icon }),
         el("span", { class: "trait-name" }, c.name, el("small", { text: c.short })),
         el("span", { class: "trait-pct" }, ordinal(p), el("small", { text: content.bands[v.band].replace(" people your age", "") }))),
-      el("div", { class: "meter", role: "img", "aria-label": `${c.name}: ${ordinal(p)} percentile` },
-        el("span", { class: "mid" }), el("span", { class: "you", style: `left:${Math.min(98, Math.max(2, v.pct))}%` })),
+      el("div", { class: "meter", role: "img", "aria-label": `${c.name}: ${ordinal(p)} percentile${v.range ? `, likely ${Math.round(v.range[0])} to ${Math.round(v.range[1])}` : ""}` },
+        el("span", { class: "mid" }),
+        v.range ? el("span", { class: "spread", title: `Likely range ${Math.round(v.range[0])}–${Math.round(v.range[1])} (estimate)`, style: `left:${v.range[0]}%;width:${v.range[1] - v.range[0]}%` }) : null,
+        el("span", { class: "you", style: `left:${Math.min(98, Math.max(2, v.pct))}%` })),
       el("div", { class: "meter-scale", "aria-hidden": "true" }, el("span", { text: "lower" }), el("span", { text: "typical" }), el("span", { text: "higher" })),
       el("details", {}, el("summary", { text: "What it means and what moves it" }),
         el("div", { class: "detail-body" },
@@ -334,8 +336,9 @@
     download(new Blob([JSON.stringify({ exported: new Date().toISOString(), ...data }, null, 2)], { type: "application/json" }), "How Developed Are You results.json");
   });
   document.getElementById("delete-all").addEventListener("click", () => {
-    if (!confirm(`Delete ${data.history.length} saved result(s) and your settings from this browser? This can't be undone.`)) return;
-    store.clear(); data = store.load(); applySettings(); openSettings(); toast("Everything deleted");
+    if (!confirm(`Delete ${data.history.length} saved result(s) from this browser? This can't be undone. Your settings stay as they are.`)) return;
+    // Keep settings so an opted-out "Save results" stays off.
+    data.history = []; persist(); openSettings(); toast("All results deleted");
     if (state.screen === "history") historyScreen();
   });
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });

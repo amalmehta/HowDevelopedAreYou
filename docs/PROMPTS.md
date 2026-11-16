@@ -19,3 +19,5 @@ Answers given in the question widget (in order):
    → Built the site, norms script, tests and docs.
 7. "Yes, publish it" (then, on what goes public: "Everything, as is")
    → Added a GitHub Pages workflow (tests, then deploy site/), created the public repo, pushed.
+8. "Yes, walk through it"
+   → Checked privacy, security and truth items on the live site; fixed missing per-trait ranges. Answers: delete keeps the setting; wording fair; phone feel "something else" (details pending).

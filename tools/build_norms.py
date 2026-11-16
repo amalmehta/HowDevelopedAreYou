@@ -159,6 +159,8 @@ def main():
     ages, sums, items, total, dropped = load()
     table = build(ages, sums)
     alpha, sem = reliability(items)
+    # items columns follow REVERSE order: ES, A, C (10 each)
+    trait_rel = {t: reliability(items[:, 10 * i:10 * i + 10]) for i, t in enumerate(REVERSE)}
     meta = {
         "source": "Open Psychometrics BIG5 dataset (c. 2012), openpsychometrics.org/_rawdata (no licence stated; used with attribution)",
         "rawRows": total, "usedRows": int(len(ages)), "dropped": dropped,
@@ -166,6 +168,8 @@ def main():
         "window": f"+/-{BASE_WINDOW} years, widened until n>={MIN_PEERS}",
         "minAge": MIN_AGE, "maxAge": MAX_AGE,
         "alpha": alpha, "semSum": sem,
+        "traitAlpha": {t: a for t, (a, _) in trait_rel.items()},
+        "traitSemSum": {t: e for t, (_, e) in trait_rel.items()},
     }
     if "--report" in sys.argv:
         rep = report(ages, sums)

@@ -53,10 +53,17 @@ Things the tests can't check. Walk through before calling a release done.
 
 **Privacy and security**
 - [ ] DevTools → Network while taking the test: only fonts load; no other requests.
-- [ ] DevTools → Application → Local Storage: only `hday.v1`; Delete everything empties it.
+- [ ] DevTools → Application → Local Storage: only `hday.v1`; "Delete all results" empties the history and keeps your settings (so saving stays off if you turned it off).
 - [ ] Turn "Save results" off, take the test: nothing new in history.
 - [ ] Share card contains only percentiles and the peer age range.
 - [ ] Console shows no Content-Security-Policy violations.
 
 **Live**
 - [ ] The GitHub Pages URL loads over HTTPS and the feedback tab opens a GitHub issue.
+
+### Walkthrough 2026-11-15 (live site)
+
+- Privacy and security: all pass. Only the site and the two Google Fonts requests; storage holds only `hday.v1`, no cookies; saving off adds nothing; no CSP errors; share card shows percentiles and peer ages only; feedback link opens the issue form (sign-in required).
+- Truth: low-confidence note shows at 63 (302 peers). **Failed, fixed:** trait percentiles had no likely range; each trait now shows one on its meter.
+- **Failed, fixed:** "Delete everything" reset Save results to on. Now "Delete all results" keeps settings.
+- Feel (phone): "something else" reported, details pending. Wording at low percentiles: judged fair.

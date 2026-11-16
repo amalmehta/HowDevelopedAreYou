@@ -130,6 +130,7 @@ kbd { font: 12px var(--sans); border: 1px solid var(--line); border-bottom-width
 .trait-pct { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
 .trait-pct small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; }
 .meter { position: relative; height: 10px; margin: 12px 0 4px 38px; border-radius: 6px; background: linear-gradient(90deg, var(--line) 0 25%, var(--accent-soft) 25% 75%, var(--line) 75%); }
+.meter .spread { position: absolute; top: 0; bottom: 0; border-radius: 6px; background: color-mix(in srgb, var(--accent) 30%, transparent); animation: fade .3s .1s both; }
 .meter .mid { position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--muted); opacity: .5; }
 .meter .you { position: absolute; top: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--accent); animation: pop .3s .15s var(--ease) both; }
 @keyframes pop { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }

@@ -67,7 +67,7 @@ Classic scripts on a shared `HDAY` namespace (not ES modules) so the site also w
 
 - Norms: a static, derived JS file in the repo (no individual records, only percentile tables).
 - User answers and results: this browser's `localStorage` only, key `hday.v1`. No cookies, analytics, server or third party. Fonts load from Google Fonts (this sends your IP to Google, like any web font); the site falls back to system fonts offline.
-- Export: JSON download. Delete: one button, clears everything.
+- Export: JSON download. Delete: "Delete all results" clears history but keeps settings, so an opt-out of saving survives the delete.
 
 ## Threat model
 

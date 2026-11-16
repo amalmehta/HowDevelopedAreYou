@@ -31,7 +31,9 @@ globalThis.HDAY = globalThis.HDAY || {};
     const traits = {};
     for (const t of TRAITS) {
       const pct = peer[t][sums[t] - 10];
-      traits[t] = { mean: sums[t] / 10, pct, band: band(pct), peerMean: peer["mean_" + t] };
+      const e = Math.round(norms.meta.traitSemSum[t]);
+      const tAt = (s) => peer[t][Math.min(50, Math.max(10, s)) - 10];
+      traits[t] = { mean: sums[t] / 10, pct, range: [tAt(sums[t] - e), tAt(sums[t] + e)], band: band(pct), peerMean: peer["mean_" + t] };
     }
     const total = sums.C + sums.A + sums.ES;
     const mPct = peer.M[total - 30];

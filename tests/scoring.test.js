@@ -62,6 +62,17 @@ test("likely range brackets the percentile and uses the measured SEM", () => {
   assert.ok(hi - lo > 10 && hi - lo < 50, `width ${hi - lo}`);
 });
 
+test("each trait has its own likely range; 10 items carry more error than 30", () => {
+  const ans = Object.fromEntries(items.map((it) => [it.id, 3]));
+  const r = S.score(ans, 30, items, norms);
+  for (const t of ["C", "A", "ES"]) {
+    const [lo, hi] = r.traits[t].range;
+    assert.ok(lo <= r.traits[t].pct && r.traits[t].pct <= hi, t);
+    // compare on the 1-5 score scale (percentile widths shrink near the ends)
+    assert.ok(norms.meta.traitSemSum[t] / 10 > norms.meta.semSum / 30, `${t} error per point`);
+  }
+});
+
 test("same answers score lower percentile for an older peer group", () => {
   const ans = Object.fromEntries(items.map((it) => [it.id, it.rev ? 2 : 4]));
   const young = S.score(ans, 18, items, norms).maturity.pct;
