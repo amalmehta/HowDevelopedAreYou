@@ -17,3 +17,5 @@ Answers given in the question widget (in order):
    → Showed three looks and the done criteria.
 6. Look: one statement per screen. Done criteria and deferred: yes, as written.
    → Built the site, norms script, tests and docs.
+7. "Yes, publish it" (then, on what goes public: "Everything, as is")
+   → Added a GitHub Pages workflow (tests, then deploy site/), created the public repo, pushed.
