@@ -447,7 +447,7 @@ DELIVERABLES:
 - tools/build_norms.py — reproducible norms + validity report
 - tests/ — node --test suite with sample personas
 - README.md and docs/ (INSTRUCTIONS, SYSTEM-DESIGN, FILE-STRUCTURE, PROMPTS)
-- Public GitHub repo "HowDevelopedAreYou" with GitHub Pages (after you've seen it locally)
+- Public repo github.com/amalmehta/HowDevelopedAreYou; live at https://amalmehta.com/HowDevelopedAreYou/
 
 DEFINITIONS AND DEFERRED:
 
@@ -474,6 +474,7 @@ OPEN QUESTIONS / ASSUMPTIONS:
 CHANGELOG:
 
 - 2026-11-15 — created
+- 2026-11-15 — published: public repo, GitHub Pages at amalmehta.com/HowDevelopedAreYou
 - 2026-11-15 — first build: personality-maturity percentile site; filled DELIVERABLES, DEFINITIONS AND DEFERRED, OPEN QUESTIONS
 - 2026-09-15 — added meta-instruction: built-out applications include a small feedback tab
 - 2026-09-15 — added meta-instruction: no "Claude" attribution in commits, PRs, or branches

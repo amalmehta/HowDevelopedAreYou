@@ -14,7 +14,7 @@ A 4-minute test of personality maturity: how organized, warm and steady you are 
 
 ## Links
 
-- **[Take the test](https://amalmehta.github.io/HowDevelopedAreYou/)**
+- **[Take the test](https://amalmehta.com/HowDevelopedAreYou/)**
 - [Instructions](docs/INSTRUCTIONS.md): run, test, rebuild norms, manual checklist
 - [System design](docs/SYSTEM-DESIGN.md): scoring definitions, privacy, threat model, trade-offs
 - [File structure](docs/FILE-STRUCTURE.md)
