@@ -19,3 +19,7 @@ A 4-minute test of personality maturity: how organized, warm and steady you are 
 - [System design](docs/SYSTEM-DESIGN.md): scoring definitions, privacy, threat model, trade-offs
 - [File structure](docs/FILE-STRUCTURE.md)
 - [Prompt log](docs/PROMPTS.md)
+
+## How it was built
+
+How this was built and how it works, with diagrams: [docs/HOW-IT-WAS-BUILT.md](docs/HOW-IT-WAS-BUILT.md)
