@@ -6,7 +6,7 @@ HowDevelopedAreYou? is a static website. In about four minutes it tells you how 
 ## Build history
 
 ```mermaid
-flowchart LR
+flowchart TD
   idea["Idea: a survey site that figures out how mature or developed someone truly is"]
   m1["First version 2026-11-15: maturity percentile site with open norms, tests and docs"]
   m2["Published 2026-11-15: GitHub Pages deploy, live link in README"]
